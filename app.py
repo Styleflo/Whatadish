@@ -6,6 +6,10 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
+@app.route('/play')
+def play():
+    return render_template('play.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True)
