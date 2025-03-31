@@ -17,7 +17,25 @@
     box-sizing: border-box;
 }
 
+header {
+    max-width: 2000px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    position: relative;
+    top: 10px;
+    left: 10px;
+    width: 80px;  /* Ajuste la taille selon ton besoin */
+    height: auto;
+}
+
 body {
+    /*background: url('background1.jpg') no-repeat center center/cover;*/
     font-family: var(--font-family);
     background-color: var(--background-color);
     color: var(--text-color);
