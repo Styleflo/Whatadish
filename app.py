@@ -12,7 +12,7 @@ def play():
 
 @app.route('/rule')
 def rule():
-    return None
+    return render_template('rule.html')
 
 
 if __name__ == '__main__':
