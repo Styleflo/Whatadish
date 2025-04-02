@@ -1,0 +1,34 @@
+/* Style du header */
+header {
+    display: flex;
+    align-items: center;  /* Aligner verticalement */
+    justify-content: space-between; /* Évite les décalages */
+    position: relative;
+    height: 80px; /* Hauteur ajustable selon besoin */
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo tout à gauche */
+.logo {
+    height: 50px; /* Taille du logo */
+    display: block; /* Évite l'espace blanc sous les images inline */
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/* Conteneur centré pour le titre */
+.title-box {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.title-box a {
+    text-decoration: none; /* Supprime le soulignement */
+    color: inherit; /* Utilise la couleur du texte parent */
+    cursor: pointer; /* Garde le curseur interactif */
+}

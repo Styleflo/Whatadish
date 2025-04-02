@@ -6,15 +6,22 @@
     <title>Mon Site Flask</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
 </head>
+
 <body>
 
-    <!-- Header commun -->
     <header>
-        <a href="index.html">
-            <img src="static/background3.jpg" alt="What A Dish Logo" class="logo">
+        <!-- Logo à gauche -->
+        <a href="/">
+            <img src="{{ url_for('static', filename='images/background3.jpg') }}" alt="What A Dish Logo" class="logo">
         </a>
-        <h1>What a dish !</h1>
+        <!-- Titre centré -->
+        <div class="title-box">
+            <a href="/" >
+                <h1>What a dish !</h1>
+            </a>
+        </div>
     </header>
+
 
     <!-- Contenu spécifique de chaque page -->
     <main>
@@ -23,7 +30,7 @@
 
     <!-- Footer (pied de page) -->
     <footer>
-        <p>&copy; 2025 Mon Site - Tous droits réservés</p>
+        <p>&copy; 2025 What a Dish - Tous droits réservés</p>
     </footer>
 
 </body>

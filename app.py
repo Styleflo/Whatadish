@@ -6,9 +6,13 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
-@app.route('/play')
+@app.route('/play', methods=['GET'])
 def play():
     return render_template('play.html')
+
+@app.route('/rule')
+def rule():
+    return render_template('rule.html')
 
 
 if __name__ == '__main__':
