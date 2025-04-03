@@ -1,3 +1,5 @@
+from tkinter import image_names
+
 from flask import Flask, render_template, request
 
 app = Flask(__name__)
@@ -10,7 +12,7 @@ def home():
 def play():
     if request.method == 'POST':
         user_answer = request.form.get('answer')
-    return render_template('play.html')
+    return render_template('play.html', dish_name= 'yooooo', image_path='images/background3.jpg')
 
 @app.route('/rule')
 def rule():

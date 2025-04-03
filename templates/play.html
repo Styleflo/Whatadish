@@ -3,8 +3,9 @@
 {% block content %}
     <div class="centered">
         <div class="container">
+            <label><strong>{{ dish_name }}</strong></label>
             <div class="image-box">
-                <img src="{{ url_for('static', filename='images/background3.jpg') }}" alt="What A Dish Logo">
+                <img src="{{ url_for('static', filename=image_path) }}" alt="What A Dish Logo">
             </div>
             <div class="align">
                 <form method="post">
