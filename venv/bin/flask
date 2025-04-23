@@ -1,4 +1,6 @@
-#!/home/helicop2/Work/Anglais/whatadish/venv/bin/python3
+#!/bin/sh
+'''exec' "/Users/Florian/Documents/Ecole/Télécom Nancy/2A/Semestre 2/Anglais/Projet anglais/whatadish/venv/bin/python" "$0" "$@"
+' '''
 # -*- coding: utf-8 -*-
 import re
 import sys

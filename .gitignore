@@ -50,6 +50,6 @@ node_modules/
 # Ignorer les fichiers de configuration de Linux
 *.swp
 =======
-.DS_Store
+
 __pycache__
 >>>>>>> 5003476d6d9b193c56d1ff5bbd2412104cc70728
