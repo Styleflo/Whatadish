@@ -1,0 +1,29 @@
+.centered-top-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* Centre horizontalement */
+    align-items: center;      /* Centre verticalement */
+    height: 80vh;            /* Prend toute la hauteur de l'écran */
+    padding-right: 30%;        /* Décalage vers la gauche */
+    padding-bottom: 10%;
+}
+
+.rule-title {
+    padding-bottom: 20px;
+}
+
+p,li {
+    padding-bottom: 3px;
+}
+
+.end-p {
+    padding-bottom: 15px;
+}
+
+ul {
+    padding-left: 70px;
+}
+
+.end {
+    padding-top: 15px;
+}

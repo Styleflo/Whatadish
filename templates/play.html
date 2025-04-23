@@ -1,5 +1,19 @@
 {% extends "base.html" %}
 
 {% block content %}
-
+    <div class="centered">
+        <div class="container">
+            <label><strong>{{ dish_name }}</strong></label>
+            <div class="image-box">
+                <img src="{{ url_for('static', filename=image_path) }}" alt="What A Dish Logo">
+            </div>
+            <div class="align">
+                <form method="post">
+                    <label for="answer-input" class="reponse"> <strong>Votre réponse :</strong></label>
+                    <input class="reponse" type="text" id="answer-input" name="answer" placeholder="Entrez un pays..." required>
+                    <button class="white" type="submit">Valider</button>
+                </form>
+            </div>
+        </div>
+    </div>
 {% endblock %}

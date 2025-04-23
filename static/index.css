@@ -1,0 +1,46 @@
+/* 2. Variables CSS */
+:root {
+    --primary-color: #536878;
+    --secondary-color: #496979;
+    --text-color: #536878;
+    --background-color: #EAE0C8;
+    --font-family: 'Poppins', sans-serif;
+}
+
+.centered {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    height: 80vh; /* Prend toute la hauteur de la page */
+}
+
+button {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    /*color: white;*/
+    border: none;
+    padding:9px 18px;
+    font-size: 15px;
+    margin: 8px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background 0.3s ease-in-out;
+}
+
+button.white {
+    /*color: var(--background-color);*/
+    color: white;
+}
+
+button.big {
+    padding:25px 50px;
+    font-size: 40px;
+    margin: 25px;
+    border-radius: 15px;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+}
+

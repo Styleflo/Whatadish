@@ -1,4 +1,6 @@
-from flask import Flask, render_template
+from tkinter import image_names
+
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -6,9 +8,15 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
-@app.route('/play')
+@app.route('/play', methods=['GET', 'POST'])
 def play():
-    return render_template('play.html')
+    if request.method == 'POST':
+        user_answer = request.form.get('answer')
+    return render_template('play.html', dish_name= 'yooooo', image_path='images/background3.jpg')
+
+@app.route('/rule')
+def rule():
+    return render_template('rule.html')
 
 
 if __name__ == '__main__':
