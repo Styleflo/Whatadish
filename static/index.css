@@ -5,6 +5,7 @@
     --text-color: #536878;
     --background-color: #EAE0C8;
     --font-family: 'Poppins', sans-serif;
+    --height-container :500px;
 }
 
 .centered {
