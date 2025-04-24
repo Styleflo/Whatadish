@@ -1,11 +1,16 @@
 import pandas as pd
 import sqlite3
-import random as rd
 from geopy.distance import geodesic
 
 with sqlite3.connect("my_base.db") as conn:
     df = pd.read_sql_query("select * from my_table", conn)
     playable_df = df.copy()
+
+def reload():
+    global playable_df
+    with sqlite3.connect("my_base.db") as conn:
+        df = pd.read_sql_query("select * from my_table", conn)
+        playable_df = df.copy()
 
 def isEndOfData():
     if playable_df.empty:
@@ -50,3 +55,9 @@ def isCountry(userCountry):
         if not df.empty:
             return True
         return False
+
+def alreadyAnswered(userCountry, reponses):
+    for score, pays in reponses:
+        if pays == userCountry:
+            return True
+    return False

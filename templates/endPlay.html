@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="centered">
+        <div class="container">
+            <h2><strong><u>Final score : {{ score }}</u></strong></h2>
+            <div class="image-box">
+                <img src="{{ url_for('static', filename=image_path) }}" alt="score_photo">
+            </div>
+            <div class="align">
+                <a href="/">
+                    <button class="white">recommencer</button>
+                </a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
