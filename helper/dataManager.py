@@ -43,3 +43,10 @@ def proximity_percentage(userCountry, answerCountry):
             return geo_proximity([(latUserCountry, longUserCountry), (latAnswerCountry, longAnswerCountry)])
         else:
             print("Un ou les deux pays ne sont pas trouvés dans la base de données.")
+
+def isCountry(userCountry):
+    with sqlite3.connect("my_base.db") as conn:
+        df = pd.read_sql_query("select CountryName from CountryTable where CountryName= ?", conn, params=(userCountry,))
+        if not df.empty:
+            return True
+        return False
