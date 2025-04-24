@@ -3,17 +3,27 @@
 {% block content %}
     <div class="centered play">
         <div class="container fix">
+            <h2><strong> <u>Score :</u>   {{ score }}</strong></h2>
 
+            {% if previous_guesses %}
+                <div class="guess-list">
+                    <ul>
+                        {% for score, country in previous_guesses %}
+                            <li> {{ country }} - {{ score }}%</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
         </div>
         <div class="container">
-            <label><strong>{{ dish_name }}</strong></label>
+            <h2><strong><u>{{ dish_name }}</u></strong></h2>
             <div class="image-box">
                 <img src="{{ url_for('static', filename=image_path) }}" alt="What A Dish Logo">
             </div>
             <div class="align">
                 <form method="post">
                     <label for="answer-input" class="reponse"> <strong>Votre réponse :</strong></label>
-                    <input class="reponse" type="text" id="answer-input" name="answer" placeholder="Entrez un pays..." required>
+                    <input class="reponse" type="text" id="answer-input" name="answer" placeholder= "{{ message }}" required>
                     <button class="white" type="submit">Valider</button>
                 </form>
             </div>

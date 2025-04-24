@@ -14,7 +14,9 @@
 
 .container.fix {
     width: 250px;
+    justify-content: flex-start; /* Aligne le contenu en haut */
 }
+
 
 .centered.play {
     flex-direction: row;
@@ -40,4 +42,17 @@
     width: 100%;
     height: 100%;
     object-fit: cover; /* Remplit la box sans déformation */
+}
+
+.guess-list {
+    margin-top: 10px;
+}
+
+.guess-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.guess-list li {
+    margin-bottom: 5px;
 }
