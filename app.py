@@ -1,6 +1,5 @@
 from dataManager import *
 from flask import Flask, render_template, request
-from proximity import proximity_percentage
 
 app = Flask(__name__)
 
@@ -17,10 +16,11 @@ def play():
 
     if request.method == 'POST':
         user_answer = request.form.get('answer')
+
         if verifyAnswer(user_answer, data['Origine(pays)']):
+
             if isEndOfData():
                 pass
-                #redirect
             else:
                 data = pickNewData()
         else:
