@@ -29,7 +29,7 @@ def play():
         user_answer = request.form.get('answer')
 
         if user_answer == '1':
-            return render_template('endPlay.html', score=score, image_path=f"images/nul.jpg", message="Entrez un pays")
+            return render_template('endPlay.html', score=score, image_path=f"images/nul.jpg", message="Enter a country")
 
         #traite le cas d'une mauvaise orthographe
         if not isCountry(user_answer):
@@ -61,7 +61,7 @@ def play():
                 compteur += 1
         else:
             pass
-    return render_template('play.html', score=score, previous_guesses=reponses, dish_name= data['Nom'], image_path=f"images/plats/{data['Photo']}", message="Entrez un pays")
+    return render_template('play.html', score=score, previous_guesses=reponses, dish_name= data['Nom'], image_path=f"images/plats/{data['Photo']}", message="Enter a country")
 
 @app.route('/rule')
 def rule():
