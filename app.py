@@ -28,8 +28,8 @@ def play():
     if request.method == 'POST':
         user_answer = request.form.get('answer')
 
-        if user_answer == '1':
-            return render_template('endPlay.html', score=score, image_path=f"images/nul.jpg", message="Enter a country")
+        # if user_answer == '1':
+        #     return render_template('endPlay.html', score=score, image_path=f"images/nul.jpg", message="Enter a country")
 
         #traite le cas d'une mauvaise orthographe
         if not isCountry(user_answer):
