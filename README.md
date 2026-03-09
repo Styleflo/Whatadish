@@ -7,7 +7,7 @@ Le but deviner la provenance d'un plat.
 
 ### Étape 1 : cloner le projet
 ```bash
-  git clone 
+  git clone https://github.com/Styleflo/Whatadish.git
 ```
 
 ### Étape 2 : créer un environement python
